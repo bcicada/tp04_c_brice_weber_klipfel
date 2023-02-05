@@ -1,6 +1,8 @@
 # TP Docker - Partie 1
 
 ## Démarche à suivre :
+### Partie 1 :
+
 Récupération de l'image Jenkins :
 ```sh
 sudo docker pull jenkins/jenkins:latest
@@ -24,3 +26,16 @@ Arrêt du conteneur :
 sudo docker stop <id_conteneur>
 ```
 
+### Partie 2 :
+
+Création du Dockerfile.
+
+Construction de l'image :
+```sh
+docker build -t jenkins_image .
+```
+
+Test du service :
+```sh
+docker run -p 8080:8080 jenkins_image
+```
